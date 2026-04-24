@@ -6,7 +6,12 @@ from typing import Any
 import httpx
 
 from .errors import RescontreAPIError
-from .models import Direction, SettleResponse, VerifyResponse
+from .models import (
+    BilateralSettlementResult,
+    Direction,
+    SettleResponse,
+    VerifyResponse,
+)
 
 DEFAULT_TIMEOUT = 10.0
 
@@ -145,3 +150,15 @@ class Client:
             },
         )
         return SettleResponse.model_validate(data)
+
+    def bilateral_settlement(
+        self,
+        agent_id: str,
+        server_id: str,
+    ) -> BilateralSettlementResult:
+        data = self._request(
+            "POST",
+            "/settlement",
+            json={"agent_id": agent_id, "server_id": server_id},
+        )
+        return BilateralSettlementResult.model_validate(data)

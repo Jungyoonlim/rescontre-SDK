@@ -1,8 +1,16 @@
 from .client import Client
 from .errors import RescontreAPIError, RescontreError
-from .models import CreditTier, Direction, Rail, SettleResponse, VerifyResponse
+from .models import (
+    BilateralSettlementResult,
+    CreditTier,
+    Direction,
+    Rail,
+    SettleResponse,
+    VerifyResponse,
+)
 
 __all__ = [
+    "BilateralSettlementResult",
     "Client",
     "CreditTier",
     "Direction",

@@ -34,3 +34,12 @@ class SettleResponse(BaseModel):
     commitment_id: str | None = None
     net_position: int | None = None
     commitments_until_settlement: int | None = None
+
+
+class BilateralSettlementResult(BaseModel):
+    agent_id: str
+    server_id: str
+    gross_volume: int
+    net_amount: int
+    commitments_netted: int
+    compression: float
