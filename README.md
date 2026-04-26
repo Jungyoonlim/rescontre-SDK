@@ -55,3 +55,17 @@ with Client("https://rescontre-production.up.railway.app") as c:
     print(f"Net:   ${result.net_amount / 1_000_000:.2f}")
     print(f"Compression: {result.compression:.0%}")
 ```
+
+## Examples
+
+End-to-end demo of the x402 → verify → settle → net flow lives in [`examples/`](./examples). The example server uses FastAPI, which is *not* a dependency of the SDK itself — install it separately:
+
+```bash
+pip install fastapi uvicorn
+
+# Terminal 1
+python examples/demo_server.py
+
+# Terminal 2
+python examples/demo_client.py
+```
