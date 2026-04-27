@@ -33,9 +33,9 @@ dependencies = [
 dev = ["pytest>=8.0", "respx>=0.21"]
 
 [project.urls]
-Homepage = "https://github.com/Jungyoonlim/Rescontre"
-Repository = "https://github.com/Jungyoonlim/rescontre-SDK"
-Issues = "https://github.com/Jungyoonlim/rescontre-SDK/issues"
+Homepage = "https://github.com/Rescontre/facilitator"
+Repository = "https://github.com/Rescontre/sdk-py"
+Issues = "https://github.com/Rescontre/sdk-py/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["rescontre"]
