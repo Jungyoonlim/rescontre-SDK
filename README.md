@@ -58,7 +58,7 @@ with Client("https://rescontre-production.up.railway.app") as c:
 
 ## Examples
 
-End-to-end demo of the x402 → verify → settle → net flow lives in [`examples/`](./examples). The example server uses FastAPI, which is *not* a dependency of the SDK itself — install it separately:
+End-to-end demo of the x402 → verify → settle → net flow lives in [`examples/`](./examples). The example server uses FastAPI, which is *not* a dependency of the SDK itself. Install it separately:
 
 ```bash
 pip install fastapi uvicorn
